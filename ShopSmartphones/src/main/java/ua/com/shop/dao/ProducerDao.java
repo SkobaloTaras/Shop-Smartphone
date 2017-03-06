@@ -6,4 +6,5 @@ import ua.com.shop.entity.Producer;
 
 public interface ProducerDao extends JpaRepository<Producer, Integer>{
 
+	Producer findByNameOfBrand(String nameOfBrand);
 }

@@ -36,4 +36,8 @@ public class MeasuringSystemServiceImpl implements MeasuringSystemService{
 		measuringSystemDao.save(measuringSystem);
 	}
 
+	public MeasuringSystem findByUnitsOfMeasurement(String unitsOfMeasurement) {
+		return measuringSystemDao.findByUnitsOfMeasurement(unitsOfMeasurement);
+	}
+
 }

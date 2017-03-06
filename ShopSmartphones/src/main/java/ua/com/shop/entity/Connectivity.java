@@ -1,17 +1,16 @@
 package ua.com.shop.entity;
 
+
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "connectivity")
-public class Connectivity {
+public class Connectivity  {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +20,8 @@ public class Connectivity {
 	private int numberOfSIM;
 	private String sizeOfSIM;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="id_measuringSystems")
-	private MeasuringSystem measuringSystem;
-	
+
+
 	public int getId() {
 		return id;
 	}
@@ -57,15 +54,46 @@ public class Connectivity {
 		this.sizeOfSIM = sizeOfSIM;
 	}
 
-	public MeasuringSystem getMeasuringSystem() {
-		return measuringSystem;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime
+				* result
+				+ ((communicationStandards == null) ? 0
+						: communicationStandards.hashCode());
+		result = prime * result + id;
+		result = prime * result + numberOfSIM;
+		result = prime * result
+				+ ((sizeOfSIM == null) ? 0 : sizeOfSIM.hashCode());
+		return result;
 	}
 
-	public void setMeasuringSystem(MeasuringSystem measuringSystem) {
-		this.measuringSystem = measuringSystem;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Connectivity other = (Connectivity) obj;
+		if (communicationStandards == null) {
+			if (other.communicationStandards != null)
+				return false;
+		} else if (!communicationStandards.equals(other.communicationStandards))
+			return false;
+		if (id != other.id)
+			return false;
+		if (numberOfSIM != other.numberOfSIM)
+			return false;
+		if (sizeOfSIM == null) {
+			if (other.sizeOfSIM != null)
+				return false;
+		} else if (!sizeOfSIM.equals(other.sizeOfSIM))
+			return false;
+		return true;
 	}
 
-
-	
 	
 }

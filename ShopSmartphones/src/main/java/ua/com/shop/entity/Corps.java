@@ -9,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "corps")
 public class Corps {
@@ -55,6 +56,7 @@ public class Corps {
 	@JoinColumn(name="id_measuringSystems_year")
 	private MeasuringSystem measuringSystem5;
 	
+
 	public int getId() {
 		return id;
 	}
@@ -195,6 +197,133 @@ public class Corps {
 
 	public void setMeasuringSystem5(MeasuringSystem measuringSystem5) {
 		this.measuringSystem5 = measuringSystem5;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((caseMaterial == null) ? 0 : caseMaterial.hashCode());
+		result = prime * result + ((color == null) ? 0 : color.hashCode());
+		result = prime
+				* result
+				+ ((countryProducing == null) ? 0 : countryProducing.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(depth);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(height);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + id;
+		result = prime * result
+				+ ((measuringSystem == null) ? 0 : measuringSystem.hashCode());
+		result = prime
+				* result
+				+ ((measuringSystem2 == null) ? 0 : measuringSystem2.hashCode());
+		result = prime
+				* result
+				+ ((measuringSystem3 == null) ? 0 : measuringSystem3.hashCode());
+		result = prime
+				* result
+				+ ((measuringSystem4 == null) ? 0 : measuringSystem4.hashCode());
+		result = prime
+				* result
+				+ ((measuringSystem5 == null) ? 0 : measuringSystem5.hashCode());
+		result = prime * result + ((options == null) ? 0 : options.hashCode());
+		result = prime * result
+				+ ((producer == null) ? 0 : producer.hashCode());
+		result = prime * result + ((touchId == null) ? 0 : touchId.hashCode());
+		temp = Double.doubleToLongBits(warranty);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(weight);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(width);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Corps other = (Corps) obj;
+		if (caseMaterial == null) {
+			if (other.caseMaterial != null)
+				return false;
+		} else if (!caseMaterial.equals(other.caseMaterial))
+			return false;
+		if (color == null) {
+			if (other.color != null)
+				return false;
+		} else if (!color.equals(other.color))
+			return false;
+		if (countryProducing == null) {
+			if (other.countryProducing != null)
+				return false;
+		} else if (!countryProducing.equals(other.countryProducing))
+			return false;
+		if (Double.doubleToLongBits(depth) != Double
+				.doubleToLongBits(other.depth))
+			return false;
+		if (Double.doubleToLongBits(height) != Double
+				.doubleToLongBits(other.height))
+			return false;
+		if (id != other.id)
+			return false;
+		if (measuringSystem == null) {
+			if (other.measuringSystem != null)
+				return false;
+		} else if (!measuringSystem.equals(other.measuringSystem))
+			return false;
+		if (measuringSystem2 == null) {
+			if (other.measuringSystem2 != null)
+				return false;
+		} else if (!measuringSystem2.equals(other.measuringSystem2))
+			return false;
+		if (measuringSystem3 == null) {
+			if (other.measuringSystem3 != null)
+				return false;
+		} else if (!measuringSystem3.equals(other.measuringSystem3))
+			return false;
+		if (measuringSystem4 == null) {
+			if (other.measuringSystem4 != null)
+				return false;
+		} else if (!measuringSystem4.equals(other.measuringSystem4))
+			return false;
+		if (measuringSystem5 == null) {
+			if (other.measuringSystem5 != null)
+				return false;
+		} else if (!measuringSystem5.equals(other.measuringSystem5))
+			return false;
+		if (options == null) {
+			if (other.options != null)
+				return false;
+		} else if (!options.equals(other.options))
+			return false;
+		if (producer == null) {
+			if (other.producer != null)
+				return false;
+		} else if (!producer.equals(other.producer))
+			return false;
+		if (touchId == null) {
+			if (other.touchId != null)
+				return false;
+		} else if (!touchId.equals(other.touchId))
+			return false;
+		if (Double.doubleToLongBits(warranty) != Double
+				.doubleToLongBits(other.warranty))
+			return false;
+		if (Double.doubleToLongBits(weight) != Double
+				.doubleToLongBits(other.weight))
+			return false;
+		if (Double.doubleToLongBits(width) != Double
+				.doubleToLongBits(other.width))
+			return false;
+		return true;
 	}
 	
 	

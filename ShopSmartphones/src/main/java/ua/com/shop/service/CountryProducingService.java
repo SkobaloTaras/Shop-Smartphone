@@ -11,4 +11,5 @@ public interface CountryProducingService {
 	CountryProducing findOne (int id);
 	void delete(int id);
 	void save(String nameOfCountry);
+	CountryProducing findByNameOfCountry(String nameOfCountry);
 }

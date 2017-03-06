@@ -41,9 +41,6 @@ public class MeasuringSystem {
 	private List<Camera> cameras3 = new ArrayList<Camera>();
 	
 	@OneToMany(mappedBy="measuringSystem")
-	private List<Connectivity> connectivities = new ArrayList<Connectivity>();
-	
-	@OneToMany(mappedBy="measuringSystem")
 	private List<Corps> corps = new ArrayList<Corps>();
 	
 	@OneToMany(mappedBy="measuringSystem2")
@@ -142,14 +139,6 @@ public class MeasuringSystem {
 		this.cameras3 = cameras3;
 	}
 
-	public List<Connectivity> getConnectivities() {
-		return connectivities;
-	}
-
-	public void setConnectivities(List<Connectivity> connectivities) {
-		this.connectivities = connectivities;
-	}
-
 
 	public List<Corps> getCorps() {
 		return corps;
@@ -245,6 +234,156 @@ public class MeasuringSystem {
 
 	public void setScreens2(List<Screen> screens2) {
 		this.screens2 = screens2;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((batteries == null) ? 0 : batteries.hashCode());
+		result = prime * result
+				+ ((batteries2 == null) ? 0 : batteries2.hashCode());
+		result = prime * result
+				+ ((batteries3 == null) ? 0 : batteries3.hashCode());
+		result = prime * result + ((cameras == null) ? 0 : cameras.hashCode());
+		result = prime * result
+				+ ((cameras2 == null) ? 0 : cameras2.hashCode());
+		result = prime * result
+				+ ((cameras3 == null) ? 0 : cameras3.hashCode());
+		result = prime * result + ((corps == null) ? 0 : corps.hashCode());
+		result = prime * result + ((corps2 == null) ? 0 : corps2.hashCode());
+		result = prime * result + ((corps3 == null) ? 0 : corps3.hashCode());
+		result = prime * result + ((corps4 == null) ? 0 : corps4.hashCode());
+		result = prime * result + ((corps5 == null) ? 0 : corps5.hashCode());
+		result = prime * result + id;
+		result = prime * result
+				+ ((memories == null) ? 0 : memories.hashCode());
+		result = prime * result
+				+ ((memories2 == null) ? 0 : memories2.hashCode());
+		result = prime * result
+				+ ((memories3 == null) ? 0 : memories3.hashCode());
+		result = prime * result
+				+ ((processors == null) ? 0 : processors.hashCode());
+		result = prime * result
+				+ ((processors2 == null) ? 0 : processors2.hashCode());
+		result = prime * result + ((screens == null) ? 0 : screens.hashCode());
+		result = prime * result
+				+ ((screens2 == null) ? 0 : screens2.hashCode());
+		result = prime
+				* result
+				+ ((unitsOfMeasurement == null) ? 0 : unitsOfMeasurement
+						.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MeasuringSystem other = (MeasuringSystem) obj;
+		if (batteries == null) {
+			if (other.batteries != null)
+				return false;
+		} else if (!batteries.equals(other.batteries))
+			return false;
+		if (batteries2 == null) {
+			if (other.batteries2 != null)
+				return false;
+		} else if (!batteries2.equals(other.batteries2))
+			return false;
+		if (batteries3 == null) {
+			if (other.batteries3 != null)
+				return false;
+		} else if (!batteries3.equals(other.batteries3))
+			return false;
+		if (cameras == null) {
+			if (other.cameras != null)
+				return false;
+		} else if (!cameras.equals(other.cameras))
+			return false;
+		if (cameras2 == null) {
+			if (other.cameras2 != null)
+				return false;
+		} else if (!cameras2.equals(other.cameras2))
+			return false;
+		if (cameras3 == null) {
+			if (other.cameras3 != null)
+				return false;
+		} else if (!cameras3.equals(other.cameras3))
+			return false;
+		if (corps == null) {
+			if (other.corps != null)
+				return false;
+		} else if (!corps.equals(other.corps))
+			return false;
+		if (corps2 == null) {
+			if (other.corps2 != null)
+				return false;
+		} else if (!corps2.equals(other.corps2))
+			return false;
+		if (corps3 == null) {
+			if (other.corps3 != null)
+				return false;
+		} else if (!corps3.equals(other.corps3))
+			return false;
+		if (corps4 == null) {
+			if (other.corps4 != null)
+				return false;
+		} else if (!corps4.equals(other.corps4))
+			return false;
+		if (corps5 == null) {
+			if (other.corps5 != null)
+				return false;
+		} else if (!corps5.equals(other.corps5))
+			return false;
+		if (id != other.id)
+			return false;
+		if (memories == null) {
+			if (other.memories != null)
+				return false;
+		} else if (!memories.equals(other.memories))
+			return false;
+		if (memories2 == null) {
+			if (other.memories2 != null)
+				return false;
+		} else if (!memories2.equals(other.memories2))
+			return false;
+		if (memories3 == null) {
+			if (other.memories3 != null)
+				return false;
+		} else if (!memories3.equals(other.memories3))
+			return false;
+		if (processors == null) {
+			if (other.processors != null)
+				return false;
+		} else if (!processors.equals(other.processors))
+			return false;
+		if (processors2 == null) {
+			if (other.processors2 != null)
+				return false;
+		} else if (!processors2.equals(other.processors2))
+			return false;
+		if (screens == null) {
+			if (other.screens != null)
+				return false;
+		} else if (!screens.equals(other.screens))
+			return false;
+		if (screens2 == null) {
+			if (other.screens2 != null)
+				return false;
+		} else if (!screens2.equals(other.screens2))
+			return false;
+		if (unitsOfMeasurement == null) {
+			if (other.unitsOfMeasurement != null)
+				return false;
+		} else if (!unitsOfMeasurement.equals(other.unitsOfMeasurement))
+			return false;
+		return true;
 	}
 	
 	

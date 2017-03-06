@@ -6,4 +6,6 @@ import ua.com.shop.entity.MeasuringSystem;
 
 public interface MeasuringSystemDao extends JpaRepository<MeasuringSystem, Integer>{
 
+	MeasuringSystem findByUnitsOfMeasurement(String unitsOfMeasurement);
+
 }

@@ -11,4 +11,5 @@ public interface OperatingSystemService {
 	OperatingSystem findOne(int id);
 	void delete(int id);
 	void save(String nameOfOperationSystem);
+	OperatingSystem findByNameOfOperationSystem(String nameOfOperationSystem);
 }

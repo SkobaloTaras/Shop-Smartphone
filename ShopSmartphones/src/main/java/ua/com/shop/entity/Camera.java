@@ -34,6 +34,7 @@ public class Camera {
 	@JoinColumn(name="id_measuringSystems_mpx2")
 	private MeasuringSystem measuringSystem3;
 	
+
 	public int getId() {
 		return id;
 	}
@@ -97,6 +98,66 @@ public class Camera {
 
 	public void setFlash(String flash) {
 		this.flash = flash;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((flash == null) ? 0 : flash.hashCode());
+		result = prime * result + frontCamera;
+		result = prime * result + id;
+		result = prime * result + mainCamera;
+		result = prime * result
+				+ ((measuringSystem == null) ? 0 : measuringSystem.hashCode());
+		result = prime
+				* result
+				+ ((measuringSystem2 == null) ? 0 : measuringSystem2.hashCode());
+		result = prime
+				* result
+				+ ((measuringSystem3 == null) ? 0 : measuringSystem3.hashCode());
+		result = prime * result + videoResolution;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Camera other = (Camera) obj;
+		if (flash == null) {
+			if (other.flash != null)
+				return false;
+		} else if (!flash.equals(other.flash))
+			return false;
+		if (frontCamera != other.frontCamera)
+			return false;
+		if (id != other.id)
+			return false;
+		if (mainCamera != other.mainCamera)
+			return false;
+		if (measuringSystem == null) {
+			if (other.measuringSystem != null)
+				return false;
+		} else if (!measuringSystem.equals(other.measuringSystem))
+			return false;
+		if (measuringSystem2 == null) {
+			if (other.measuringSystem2 != null)
+				return false;
+		} else if (!measuringSystem2.equals(other.measuringSystem2))
+			return false;
+		if (measuringSystem3 == null) {
+			if (other.measuringSystem3 != null)
+				return false;
+		} else if (!measuringSystem3.equals(other.measuringSystem3))
+			return false;
+		if (videoResolution != other.videoResolution)
+			return false;
+		return true;
 	}
 	
 	

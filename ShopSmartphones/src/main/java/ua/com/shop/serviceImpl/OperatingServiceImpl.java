@@ -36,4 +36,9 @@ public class OperatingServiceImpl implements OperatingSystemService{
 		operatingSystemDao.save(operatingSystem);
 	}
 
+	public OperatingSystem findByNameOfOperationSystem(
+			String nameOfOperationSystem) {
+		return operatingSystemDao.findByNameOfOperationSystem(nameOfOperationSystem);
+	}
+
 }

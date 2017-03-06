@@ -12,18 +12,22 @@
 			</button>
 			<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav">
-							<li><a href="/admin/smartphone">Smartphone</a></li>
-							<li><a href="/admin/producer">Producer</a></li>
-							<li><a href="/admin/connectivity">Connectivity</a></li>
-							<li><a href="/admin/operatingSystem">OperatingSystem</a></li>
-							<li><a href="/admin/screen">Screen</a></li>
-							<li class="active"><a href="/admin/processor">Processor</a><span
-								class="sr-only">(current)</span></li>
-							<li><a href="/admin/memory">Memory</a></li>
-							<li><a href="/admin/camera">Camera</a></li>
-							<li><a href="/admin/interfacesConnectors">InterfacesConnectors</a></li>
-							<li><a href="/admin/battery">Battery</a></li>
-							<li><a href="/admin/corps">Corps</a></li>
+						<li><a href="/admin/smartphone">Smartphone</a></li>
+					<li><a href="/admin/producer">Producer</a></li>
+					<li><a href="/admin/countryProducing">CountryProducing</a></li>
+					<li><a href="/admin/connectivity">Connectivity</a></li>
+					<li><a href="/admin/operatingSystem">OperatingSystem</a></li>
+					<li><a href="/admin/screen">Screen</a></li>
+					<li class="active"><a href="/admin/processor">Processor</a><span
+						class="sr-only">(current)</span></li>
+					<li><a href="/admin/memory">Memory</a></li>
+					<li><a href="/admin/camera">Camera</a></li>
+					<li><a href="/admin/interfacesConnectors">InterfacesConnectors</a></li>
+					<li><a href="/admin/battery">Battery</a></li>
+					<li><a href="/admin/corps">Corps</a></li>
+					<li><a href="/admin/color">Color</a></li>
+					<li><a href="/admin/measuringSystem">measuringSystem</a></li>
+							<li><a href="/admin/user">User</a></li>
 						</ul>
 					</div>
 		</div>
@@ -33,10 +37,13 @@
 <div class="row">
 	<div class="col-md-12 col-xs-12">
 		<form:form class="form-horizontal" action="/admin/screen" method="POST" modelAttribute="screen">
-			 <div class="form-group">
+			<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="diagonalDisplay" style="color:red;text-align:left;"><form:errors path="diagonalDisplay"/></label>
+			</div>			
+			<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">diagonal Display</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="diagonalDisplay" id="name">
+      					<form:input type="text" class="form-control" path="diagonalDisplay" id="name"/>
     				</div>
   			</div>
   			<div class="form-group">
@@ -45,22 +52,31 @@
       					<form:select class="form-control" path="measuringSystem" id="measuringSystem" items="${measuringSystems}" itemLabel="unitsOfMeasurement" itemValue="id"/>
     				</div>
   			</div>
+  			<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="screenResolution" style="color:red;text-align:left;"><form:errors path="screenResolution"/></label>
+			</div>	
   			 <div class="form-group">
     				<label for="name" class="col-sm-2 control-label">screen Resolution</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="screenResolution" id="name">
+      					<form:input type="text" class="form-control" path="screenResolution" id="name"/>
     				</div>
   			</div>
+  			<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="screenType" style="color:red;text-align:left;"><form:errors path="screenType"/></label>
+			</div>	
   			 <div class="form-group">
     				<label for="name" class="col-sm-2 control-label">screen Type</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="screenType" id="name">
+      					<form:input type="text" class="form-control" path="screenType" id="name"/>
     				</div>
   			</div>
+  			<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="displayNumberOfColors" style="color:red;text-align:left;"><form:errors path="displayNumberOfColors"/></label>
+			</div>	
   			 <div class="form-group">
     				<label for="name" class="col-sm-2 control-label">display Number Of Colors</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="displayNumberOfColors" id="name">
+      					<form:input type="text" class="form-control" path="displayNumberOfColors" id="name"/>
     				</div>
   			</div>
 			 <div class="form-group">
@@ -69,10 +85,13 @@
       					<form:select class="form-control" path="measuringSystem2" id="measuringSystem" items="${measuringSystems}" itemLabel="unitsOfMeasurement" itemValue="id"/>
     				</div>
   			</div>
+  			<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="protectiveGlass" style="color:red;text-align:left;"><form:errors path="protectiveGlass"/></label>
+			</div>	
 			 <div class="form-group">
     				<label for="name" class="col-sm-2 control-label">protective Glass</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="protectiveGlass" id="name">
+      					<form:input type="text" class="form-control" path="protectiveGlass" id="name"/>
     				</div>
   			</div> 
 			<div class="form-group">

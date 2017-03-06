@@ -13,17 +13,21 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav">
 							<li><a href="/admin/smartphone">Smartphone</a></li>
-							<li><a href="/admin/producer">Producer</a></li>
-							<li><a href="/admin/connectivity">Connectivity</a></li>
-							<li><a href="/admin/operatingSystem">OperatingSystem</a></li>
-							<li><a href="/admin/screen">Screen</a></li>
-							<li class="active"><a href="/admin/processor">Processor</a><span
-								class="sr-only">(current)</span></li>
-							<li><a href="/admin/memory">Memory</a></li>
-							<li><a href="/admin/camera">Camera</a></li>
-							<li><a href="/admin/interfacesConnectors">InterfacesConnectors</a></li>
-							<li><a href="/admin/battery">Battery</a></li>
-							<li><a href="/admin/corps">Corps</a></li>
+					<li><a href="/admin/producer">Producer</a></li>
+					<li><a href="/admin/countryProducing">CountryProducing</a></li>
+					<li><a href="/admin/connectivity">Connectivity</a></li>
+					<li><a href="/admin/operatingSystem">OperatingSystem</a></li>
+					<li><a href="/admin/screen">Screen</a></li>
+					<li class="active"><a href="/admin/processor">Processor</a><span
+						class="sr-only">(current)</span></li>
+					<li><a href="/admin/memory">Memory</a></li>
+					<li><a href="/admin/camera">Camera</a></li>
+					<li><a href="/admin/interfacesConnectors">InterfacesConnectors</a></li>
+					<li><a href="/admin/battery">Battery</a></li>
+					<li><a href="/admin/corps">Corps</a></li>
+					<li><a href="/admin/color">Color</a></li>
+					<li><a href="/admin/measuringSystem">measuringSystem</a></li>
+							<li><a href="/admin/user">User</a></li>
 						</ul>
 					</div>
 		</div>
@@ -33,29 +37,31 @@
 <div class="row">
 	<div class="col-md-12 col-xs-12">
 		<form:form class="form-horizontal" action="/admin/connectivity" method="POST" modelAttribute="connectivity">
-				
+				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="communicationStandards" style="color:red;text-align:left;"><form:errors path="communicationStandards"/></label>
+				</div>
 				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">communication Standards</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="communicationStandards" id="name">
+      					<form:input type="text" class="form-control" path="communicationStandards" id="name"/>
     				</div>
   				</div>
-				<div class="form-group">
-    				<label for="measuringSystem" class="col-sm-2 control-label">Measuring system</label>
-    				<div class="col-sm-10">
-      					<form:select class="form-control" path="measuringSystem" id="measuringSystem" items="${measuringSystems}" itemLabel="unitsOfMeasurement" itemValue="id"/>
-    				</div>
-  				</div>
+  				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="numberOfSIM" style="color:red;text-align:left;"><form:errors path="numberOfSIM"/></label>
+				</div>
   				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">numberOfSIM</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="numberOfSIM" id="name">
+      					<form:input type="text" class="form-control" path="numberOfSIM" id="name"/>
     				</div>
   				</div>	
   				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="sizeOfSIM" style="color:red;text-align:left;"><form:errors path="sizeOfSIM"/></label>
+				</div>
+  				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">sizeOfSIM</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="sizeOfSIM" id="name">
+      					<form:input type="text" class="form-control" path="sizeOfSIM" id="name"/>
     				</div>
   				</div>	
 				<div class="form-group">
@@ -86,7 +92,7 @@
 </div>
 <c:forEach items="${connectivities}" var="connectivity">
 	<div class="row">
-		<div class="col-md-2 col-xs-2 col-md-offset-2">${connectivity.communicationStandards} ${connectivity.measuringSystem.unitsOfMeasurement}</div>
+		<div class="col-md-2 col-xs-2 col-md-offset-2">${connectivity.communicationStandards} </div>
 		<div class="col-md-2 col-xs-2 ">${connectivity.numberOfSIM}</div>
 		<div class="col-md-2 col-xs-2 ">${connectivity.sizeOfSIM}</div>
 		<div class="col-md-2 col-xs-2">

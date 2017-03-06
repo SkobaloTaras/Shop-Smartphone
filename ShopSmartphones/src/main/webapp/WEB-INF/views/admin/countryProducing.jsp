@@ -13,7 +13,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-						<li><a href="/admin/smartphone">Smartphone</a></li>
+								<li><a href="/admin/smartphone">Smartphone</a></li>
 					<li><a href="/admin/producer">Producer</a></li>
 					<li><a href="/admin/countryProducing">CountryProducing</a></li>
 					<li><a href="/admin/connectivity">Connectivity</a></li>
@@ -40,6 +40,9 @@
 		<div class="row">
 			<div class="col-md-12 col-xs-12">
 				<form:form class="form-horizontal" action="/admin/countryProducing" method="POST" modelAttribute="countryProducing">
+					<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="nameOfCountry" style="color:red;text-align:left;"><form:errors path="nameOfCountry"/></label>
+					</div>
 					<div class="form-group">
     					<label for="name" class="col-sm-2 control-label">Name</label>
     					<div class="col-sm-10">

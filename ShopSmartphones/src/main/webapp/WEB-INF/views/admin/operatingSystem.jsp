@@ -13,8 +13,22 @@
 			</button>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="operatingSystem">operatingSystem</a><span
+					<li><a href="/admin/smartphone">Smartphone</a></li>
+					<li><a href="/admin/producer">Producer</a></li>
+					<li><a href="/admin/countryProducing">CountryProducing</a></li>
+					<li><a href="/admin/connectivity">Connectivity</a></li>
+					<li><a href="/admin/operatingSystem">OperatingSystem</a></li>
+					<li><a href="/admin/screen">Screen</a></li>
+					<li class="active"><a href="/admin/processor">Processor</a><span
 						class="sr-only">(current)</span></li>
+					<li><a href="/admin/memory">Memory</a></li>
+					<li><a href="/admin/camera">Camera</a></li>
+					<li><a href="/admin/interfacesConnectors">InterfacesConnectors</a></li>
+					<li><a href="/admin/battery">Battery</a></li>
+					<li><a href="/admin/corps">Corps</a></li>
+					<li><a href="/admin/color">Color</a></li>
+					<li><a href="/admin/measuringSystem">measuringSystem</a></li>
+							<li><a href="/admin/user">User</a></li>
 				</ul>
 			</div>
 		</div>
@@ -26,6 +40,9 @@
 		<div class="row">
 			<div class="col-md-12 col-xs-12">
 				<form:form class="form-horizontal" action="/admin/operatingSystem" method="POST"  modelAttribute="operatingSystem">
+					<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="nameOfColor" style="color:red;text-align:left;"><form:errors path="nameOfOperationSystem"/></label>
+					</div>
 					<div class="form-group">
     					<label for="name" class="col-sm-2 control-label">Name</label>
     					<div class="col-sm-10">

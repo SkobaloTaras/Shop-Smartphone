@@ -9,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "processor")
 public class Processor {
@@ -29,6 +30,7 @@ public class Processor {
 	@JoinColumn(name="id_measuringSystems_GHz")
 	private MeasuringSystem measuringSystem2;
 	
+
 	public int getId() {
 		return id;
 	}
@@ -85,6 +87,66 @@ public class Processor {
 
 	public void setMeasuringSystem2(MeasuringSystem measuringSystem2) {
 		this.measuringSystem2 = measuringSystem2;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(frequencyOfCPU);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result
+				+ ((gpuModel == null) ? 0 : gpuModel.hashCode());
+		result = prime * result + id;
+		result = prime * result
+				+ ((measuringSystem == null) ? 0 : measuringSystem.hashCode());
+		result = prime
+				* result
+				+ ((measuringSystem2 == null) ? 0 : measuringSystem2.hashCode());
+		result = prime * result
+				+ ((modelCPU == null) ? 0 : modelCPU.hashCode());
+		result = prime * result + numberOfCores;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Processor other = (Processor) obj;
+		if (Double.doubleToLongBits(frequencyOfCPU) != Double
+				.doubleToLongBits(other.frequencyOfCPU))
+			return false;
+		if (gpuModel == null) {
+			if (other.gpuModel != null)
+				return false;
+		} else if (!gpuModel.equals(other.gpuModel))
+			return false;
+		if (id != other.id)
+			return false;
+		if (measuringSystem == null) {
+			if (other.measuringSystem != null)
+				return false;
+		} else if (!measuringSystem.equals(other.measuringSystem))
+			return false;
+		if (measuringSystem2 == null) {
+			if (other.measuringSystem2 != null)
+				return false;
+		} else if (!measuringSystem2.equals(other.measuringSystem2))
+			return false;
+		if (modelCPU == null) {
+			if (other.modelCPU != null)
+				return false;
+		} else if (!modelCPU.equals(other.modelCPU))
+			return false;
+		if (numberOfCores != other.numberOfCores)
+			return false;
+		return true;
 	}
 
 	

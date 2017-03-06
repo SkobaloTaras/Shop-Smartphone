@@ -11,4 +11,5 @@ public interface MeasuringSystemService {
 	MeasuringSystem findOne(int id);
 	void delete(int id);
 	void save(String unitsOfMeasurement);
+	MeasuringSystem findByUnitsOfMeasurement(String unitsOfMeasurement);
 }

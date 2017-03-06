@@ -36,6 +36,10 @@ public class CountryProducingServiceImpl implements CountryProducingService{
 		countryProducingDao.save(countryProducing);
 	}
 
+	public CountryProducing findByNameOfCountry(String nameOfCountry) {
+		return countryProducingDao.findByNameOfCountry(nameOfCountry);
+	}
+
 	
 
 }

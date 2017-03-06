@@ -8,4 +8,6 @@ import ua.com.shop.entity.CountryProducing;
 
 public interface CountryProducingDao extends JpaRepository<CountryProducing, Integer>{
 
+	CountryProducing findByNameOfCountry(String nameOfCountry);
+
 }

@@ -11,4 +11,5 @@ public interface ProducerService {
 	Producer findOne(int id);
 	void delete(int id);
 	void save(String nameOfBrand);
+	Producer findByNameOfBrand(String nameOfBrand);
 }

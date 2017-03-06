@@ -12,18 +12,22 @@
 			</button>
 			<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav">
-							<li><a href="/admin/smartphone">Smartphone</a></li>
-							<li><a href="/admin/producer">Producer</a></li>
-							<li><a href="/admin/connectivity">Connectivity</a></li>
-							<li><a href="/admin/operatingSystem">OperatingSystem</a></li>
-							<li><a href="/admin/screen">Screen</a></li>
-							<li class="active"><a href="/admin/processor">Processor</a><span
-								class="sr-only">(current)</span></li>
-							<li><a href="/admin/memory">Memory</a></li>
-							<li><a href="/admin/camera">Camera</a></li>
-							<li><a href="/admin/interfacesConnectors">InterfacesConnectors</a></li>
-							<li><a href="/admin/battery">Battery</a></li>
-							<li><a href="/admin/corps">Corps</a></li>
+					<li><a href="/admin/smartphone">Smartphone</a></li>
+					<li><a href="/admin/producer">Producer</a></li>
+					<li><a href="/admin/countryProducing">CountryProducing</a></li>
+					<li><a href="/admin/connectivity">Connectivity</a></li>
+					<li><a href="/admin/operatingSystem">OperatingSystem</a></li>
+					<li><a href="/admin/screen">Screen</a></li>
+					<li class="active"><a href="/admin/processor">Processor</a><span
+						class="sr-only">(current)</span></li>
+					<li><a href="/admin/memory">Memory</a></li>
+					<li><a href="/admin/camera">Camera</a></li>
+					<li><a href="/admin/interfacesConnectors">InterfacesConnectors</a></li>
+					<li><a href="/admin/battery">Battery</a></li>
+					<li><a href="/admin/corps">Corps</a></li>
+					<li><a href="/admin/color">Color</a></li>
+					<li><a href="/admin/measuringSystem">measuringSystem</a></li>
+							<li><a href="/admin/user">User</a></li>
 						</ul>
 					</div>
 		</div>
@@ -33,17 +37,22 @@
 <div class="row">
 	<div class="col-md-12 col-xs-12">
 		<form:form class="form-horizontal" action="/admin/processor" method="POST" modelAttribute="processor">
-			
+			<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="modelCPU" style="color:red;text-align:left;"><form:errors path="modelCPU"/></label>
+			</div>
 			<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">model CPU</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="modelCPU" id="name">
+      					<form:input type="text" class="form-control" path="modelCPU" id="name"/>
     				</div>
   			</div>
+  			<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="numberOfCores" style="color:red;text-align:left;"><form:errors path="numberOfCores"/></label>
+			</div>
 			<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">number Of Cores</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="numberOfCores" id="name">
+      					<form:input type="text" class="form-control" path="numberOfCores" id="name"/>
     				</div>
   			</div>
 			<div class="form-group">
@@ -53,9 +62,12 @@
     				</div>
   			</div>
   			<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="frequencyOfCPU" style="color:red;text-align:left;"><form:errors path="frequencyOfCPU"/></label>
+			</div>
+  			<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">frequency Of CPU</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="frequencyOfCPU" id="name">
+      					<form:input type="text" class="form-control" path="frequencyOfCPU" id="name"/>
     				</div>
   			</div>
 			<div class="form-group">
@@ -64,10 +76,13 @@
       					<form:select class="form-control" path="measuringSystem2" id="measuringSystem" items="${measuringSystems}" itemLabel="unitsOfMeasurement" itemValue="id"/>
     				</div>
   			</div>
+  			<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="gpuModel" style="color:red;text-align:left;"><form:errors path="gpuModel"/></label>
+			</div>
 			<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">GPU Model</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="gpuModel" id="name">
+      					<form:input type="text" class="form-control" path="gpuModel" id="name"/>
     				</div>
   			</div>
 			<div class="form-group">

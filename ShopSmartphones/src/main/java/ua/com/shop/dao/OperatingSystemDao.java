@@ -7,4 +7,6 @@ import ua.com.shop.entity.OperatingSystem;
 public interface OperatingSystemDao extends
 		JpaRepository<OperatingSystem, Integer> {
 
+	OperatingSystem findByNameOfOperationSystem(String nameOfOperationSystem);
+
 }

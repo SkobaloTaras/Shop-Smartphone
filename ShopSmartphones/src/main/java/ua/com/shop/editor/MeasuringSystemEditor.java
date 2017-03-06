@@ -7,15 +7,15 @@ import ua.com.shop.service.MeasuringSystemService;
 
 public class MeasuringSystemEditor extends PropertyEditorSupport{
 
-	private final MeasuringSystemService systemService;
+	private final MeasuringSystemService measuringSystemService;
 
 	public MeasuringSystemEditor(MeasuringSystemService systemService) {
-		this.systemService = systemService;
+		this.measuringSystemService = systemService;
 	}
 
 	@Override
 	public void setAsText(String text) throws IllegalArgumentException {
-		MeasuringSystem system = systemService.findOne(Integer.valueOf(text));
-		setValue(system);
+		MeasuringSystem measuringSystem = measuringSystemService.findOne(Integer.valueOf(text));
+		setValue(measuringSystem);
 	}
 }

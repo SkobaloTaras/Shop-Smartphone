@@ -8,12 +8,13 @@ import org.springframework.stereotype.Service;
 import ua.com.shop.dao.ProducerDao;
 import ua.com.shop.entity.Producer;
 import ua.com.shop.service.ProducerService;
+
 @Service
-public class ProducerServiceImpl implements ProducerService{
+public class ProducerServiceImpl implements ProducerService {
 
 	@Autowired
 	private ProducerDao producerDao;
-	
+
 	public void save(Producer producer) {
 		producerDao.save(producer);
 	}
@@ -35,7 +36,9 @@ public class ProducerServiceImpl implements ProducerService{
 		producer.setNameOfBrand(nameOfBrand);
 		producerDao.save(producer);
 	}
-	
-	
-}
 
+	public Producer findByNameOfBrand(String nameOfBrand) {
+		return producerDao.findByNameOfBrand(nameOfBrand);
+	}
+
+}

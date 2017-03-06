@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "interfaces_connectors")
 public class InterfacesConnectors {
@@ -23,6 +24,7 @@ public class InterfacesConnectors {
 	private String jack;
 	
 	
+
 	public int getId() {
 		return id;
 	}
@@ -85,6 +87,72 @@ public class InterfacesConnectors {
 
 	public void setJack(String jack) {
 		this.jack = jack;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(bluetooth);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((fmTuner == null) ? 0 : fmTuner.hashCode());
+		result = prime * result + id;
+		result = prime * result + ((jack == null) ? 0 : jack.hashCode());
+		result = prime
+				* result
+				+ ((navigationSystem == null) ? 0 : navigationSystem.hashCode());
+		result = prime * result + ((nfc == null) ? 0 : nfc.hashCode());
+		result = prime * result
+				+ ((usbInterface == null) ? 0 : usbInterface.hashCode());
+		temp = Double.doubleToLongBits(wifi);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		InterfacesConnectors other = (InterfacesConnectors) obj;
+		if (Double.doubleToLongBits(bluetooth) != Double
+				.doubleToLongBits(other.bluetooth))
+			return false;
+		if (fmTuner == null) {
+			if (other.fmTuner != null)
+				return false;
+		} else if (!fmTuner.equals(other.fmTuner))
+			return false;
+		if (id != other.id)
+			return false;
+		if (jack == null) {
+			if (other.jack != null)
+				return false;
+		} else if (!jack.equals(other.jack))
+			return false;
+		if (navigationSystem == null) {
+			if (other.navigationSystem != null)
+				return false;
+		} else if (!navigationSystem.equals(other.navigationSystem))
+			return false;
+		if (nfc == null) {
+			if (other.nfc != null)
+				return false;
+		} else if (!nfc.equals(other.nfc))
+			return false;
+		if (usbInterface == null) {
+			if (other.usbInterface != null)
+				return false;
+		} else if (!usbInterface.equals(other.usbInterface))
+			return false;
+		if (Double.doubleToLongBits(wifi) != Double
+				.doubleToLongBits(other.wifi))
+			return false;
+		return true;
 	}
 
 	

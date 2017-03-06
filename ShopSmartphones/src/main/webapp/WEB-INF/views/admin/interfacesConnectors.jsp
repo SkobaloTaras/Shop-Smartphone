@@ -12,8 +12,9 @@
 			</button>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="/admin/smartphone">Smartphone</a></li>
+							<li><a href="/admin/smartphone">Smartphone</a></li>
 					<li><a href="/admin/producer">Producer</a></li>
+					<li><a href="/admin/countryProducing">CountryProducing</a></li>
 					<li><a href="/admin/connectivity">Connectivity</a></li>
 					<li><a href="/admin/operatingSystem">OperatingSystem</a></li>
 					<li><a href="/admin/screen">Screen</a></li>
@@ -24,6 +25,9 @@
 					<li><a href="/admin/interfacesConnectors">InterfacesConnectors</a></li>
 					<li><a href="/admin/battery">Battery</a></li>
 					<li><a href="/admin/corps">Corps</a></li>
+					<li><a href="/admin/color">Color</a></li>
+					<li><a href="/admin/measuringSystem">measuringSystem</a></li>
+							<li><a href="/admin/user">User</a></li>
 				</ul>
 			</div>
 		</div>
@@ -34,47 +38,67 @@
 	<div class="col-md-12 col-xs-12">
 		<form:form class="form-horizontal" action="/admin/interfacesConnectors"
 			method="POST" modelAttribute="interfacesConnectors">
-
+				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="wifi" style="color:red;text-align:left;"><form:errors path="wifi"/></label>
+				</div>
 				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">wifi</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="wifi" id="name">
+      					<form:input type="text" class="form-control" path="wifi" id="name"/>
     				</div>
   				</div>
+  				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="bluetooth" style="color:red;text-align:left;"><form:errors path="bluetooth"/></label>
+				</div>
   				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">bluetooth</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="bluetooth" id="name">
+      					<form:input type="text" class="form-control" path="bluetooth" id="name"/>
     				</div>
   				</div>
+  				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="navigationSystem" style="color:red;text-align:left;"><form:errors path="navigationSystem"/></label>
+				</div>
   				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">navigationSystem</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="navigationSystem" id="name">
+      					<form:input type="text" class="form-control" path="navigationSystem" id="name"/>
     				</div>
   				</div>
+  				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="fmTuner" style="color:red;text-align:left;"><form:errors path="fmTuner"/></label>
+				</div>
   				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">fmTuner</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="fmTuner" id="name">
+      					<form:input type="text" class="form-control" path="fmTuner" id="name"/>
     				</div>
   				</div>
+  				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="nfc" style="color:red;text-align:left;"><form:errors path="nfc"/></label>
+				</div>
   				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">nfc</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="nfc" id="name">
+      					<form:input type="text" class="form-control" path="nfc" id="name"/>
     				</div>
   				</div>
+  				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="usbInterface" style="color:red;text-align:left;"><form:errors path="usbInterface"/></label>
+				</div>
   				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">usbInterface</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="usbInterface" id="name">
+      					<form:input type="text" class="form-control" path="usbInterface" id="name"/>
     				</div>
   				</div>
   				<div class="form-group">
+						<label class="col-sm-10 col-sm-offset-2 control-label" for="jack" style="color:red;text-align:left;"><form:errors path="jack"/></label>
+				</div>
+  				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">jack</label>
     				<div class="col-sm-10">
-      					<input type="text" class="form-control" name="jack" id="name">
+      					<form:input type="text" class="form-control" path="jack" id="name"/>
     				</div>
   				</div>
 				<div class="form-group">
@@ -115,7 +139,7 @@
 	</div>
 
 </div>
-<c:forEach items="${interfacesConnectors}" var="interfacesConnectors">
+<c:forEach items="${interfacesConnectorses}" var="interfacesConnectors">
 	<div class="row">
 		<div class="col-md-1 col-xs-1 col-md-offset-1 ">${interfacesConnectors.wifi}</div>
 		<div class="col-md-1 col-xs-1 ">${interfacesConnectors.bluetooth}</div>
