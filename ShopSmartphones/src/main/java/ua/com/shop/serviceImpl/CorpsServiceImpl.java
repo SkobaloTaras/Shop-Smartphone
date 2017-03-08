@@ -7,11 +7,15 @@ import java.util.List;
 
 
 
+
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ua.com.shop.dao.CorpsDao;
 import ua.com.shop.dto.form.CorpsForm;
+import ua.com.shop.entity.Color;
 import ua.com.shop.entity.Corps;
 import ua.com.shop.entity.CountryProducing;
 import ua.com.shop.entity.MeasuringSystem;
@@ -56,8 +60,8 @@ public class CorpsServiceImpl implements CorpsService {
 			String warranty, String touchId, MeasuringSystem measuringSystem,
 			MeasuringSystem measuringSystem2, MeasuringSystem measuringSystem3,
 			MeasuringSystem measuringSystem4, MeasuringSystem measuringSystem5, 
-			CountryProducing countryProducing, Producer producer) {
-		return corpsDao.findUnique(String.valueOf(options), String.valueOf(caseMaterial), Double.valueOf(height), Double.valueOf(width), Double.valueOf(depth), Double.valueOf(weight), Double.valueOf(warranty), String.valueOf(touchId), measuringSystem.getId(),  measuringSystem2.getId(),  measuringSystem3.getId(), measuringSystem4.getId(),  measuringSystem5.getId(), countryProducing.getId(), producer.getId());
+			CountryProducing countryProducing, Producer producer, Color color) {
+		return corpsDao.findUnique(String.valueOf(options), String.valueOf(caseMaterial), Double.valueOf(height), Double.valueOf(width), Double.valueOf(depth), Double.valueOf(weight), Double.valueOf(warranty), String.valueOf(touchId), measuringSystem.getId(),  measuringSystem2.getId(),  measuringSystem3.getId(), measuringSystem4.getId(),  measuringSystem5.getId(), countryProducing.getId(), producer.getId(), color.getId());
 	}
 
 	public void save(CorpsForm form) {
@@ -78,8 +82,12 @@ public class CorpsServiceImpl implements CorpsService {
 		entity.setMeasuringSystem5(form.getMeasuringSystem5());
 		entity.setCountryProducing(form.getCountryProducing());
 		entity.setProducer(form.getProducer());
+		entity.setColor(form.getColor());
 		corpsDao.save(entity);
 	}
+
+
+
 
 	
 	

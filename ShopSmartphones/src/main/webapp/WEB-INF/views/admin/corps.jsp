@@ -39,128 +39,108 @@
 		<form:form class="form-horizontal" action="/admin/corps" method="POST"
 			modelAttribute="corps">
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">options</label>
-				<div class="col-sm-10">
+				<label for="name" class="col-sm-3 control-label">options</label>
+				<div class="col-sm-6">
 					<form:input type="text" class="form-control" path="options"
 						id="name" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">caseMaterial</label>
-				<div class="col-sm-10">
+				<label for="name" class="col-sm-3 control-label">caseMaterial</label>
+				<div class="col-sm-6">
 					<form:input type="text" class="form-control" path="caseMaterial"
 						id="name" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">height</label>
-				<div class="col-sm-10">
+				<label for="name" class="col-sm-3 control-label">height</label>
+				<div class="col-sm-4">
 					<form:input type="text" class="form-control" path="height"
 						id="name" />
 				</div>
-			</div>
-			<div class="form-group">
-				<label for="measuringSystem" class="col-sm-2 control-label">Measuring
-					system</label>
-				<div class="col-sm-10">
+				<div class="col-sm-2">
 					<form:select class="form-control" path="measuringSystem"
 						id="measuringSystem" items="${measuringSystems}"
 						itemLabel="unitsOfMeasurement" itemValue="id" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">width</label>
-				<div class="col-sm-10">
+				<label for="name" class="col-sm-3 control-label">width</label>
+				<div class="col-sm-4">
 					<form:input type="text" class="form-control" path="width" id="name" />
 				</div>
-			</div>
-			<div class="form-group">
-				<label for="measuringSystem" class="col-sm-2 control-label">Measuring
-					system</label>
-				<div class="col-sm-10">
+				<div class="col-sm-2">
 					<form:select class="form-control" path="measuringSystem2"
 						id="measuringSystem" items="${measuringSystems}"
 						itemLabel="unitsOfMeasurement" itemValue="id" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">depth</label>
-				<div class="col-sm-10">
+				<label for="name" class="col-sm-3 control-label">depth</label>
+				<div class="col-sm-4">
 					<form:input type="text" class="form-control" path="depth" id="name" />
 				</div>
-			</div>
-			<div class="form-group">
-				<label for="measuringSystem" class="col-sm-2 control-label">Measuring
-					system</label>
-				<div class="col-sm-10">
+				<div class="col-sm-2">
 					<form:select class="form-control" path="measuringSystem3"
 						id="measuringSystem" items="${measuringSystems}"
 						itemLabel="unitsOfMeasurement" itemValue="id" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">weight</label>
-				<div class="col-sm-10">
+				<label for="name" class="col-sm-3 control-label">weight</label>
+				<div class="col-sm-4">
 					<form:input type="text" class="form-control" path="weight"
 						id="name" />
 				</div>
-			</div>
-			<div class="form-group">
-				<label for="measuringSystem" class="col-sm-2 control-label">Measuring
-					system</label>
-				<div class="col-sm-10">
+				<div class="col-sm-2">
 					<form:select class="form-control" path="measuringSystem4"
 						id="measuringSystem" items="${measuringSystems}"
 						itemLabel="unitsOfMeasurement" itemValue="id" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="color" class="col-sm-2 control-label">color</label>
-				<div class="col-sm-10">
+				<label for="color" class="col-sm-3 control-label">color</label>
+				<div class="col-sm-6">
 					<form:select class="form-control" path="color" id="color"
 						items="${colors}" itemLabel="nameOfColor" itemValue="id" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">warranty</label>
-				<div class="col-sm-10">
+				<label for="name" class="col-sm-3 control-label">warranty</label>
+				<div class="col-sm-4">
 					<form:input type="text" class="form-control" path="warranty"
 						id="name" />
 				</div>
-			</div>
-			<div class="form-group">
-				<label for="measuringSystem" class="col-sm-2 control-label">Measuring
-					system</label>
-				<div class="col-sm-10">
+				<div class="col-sm-2">
 					<form:select class="form-control" path="measuringSystem5"
 						id="measuringSystem" items="${measuringSystems}"
 						itemLabel="unitsOfMeasurement" itemValue="id" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="producer" class="col-sm-2 control-label">producer</label>
-				<div class="col-sm-10">
+				<label for="producer" class="col-sm-3 control-label">producer</label>
+				<div class="col-sm-6">
 					<form:select class="form-control" path="producer" id="producer"
 						items="${producers}" itemLabel="nameOfBrand" itemValue="id" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="countryProducing" class="col-sm-2 control-label">countryProducing</label>
-				<div class="col-sm-10">
+				<label for="countryProducing" class="col-sm-3 control-label">countryProducing</label>
+				<div class="col-sm-6">
 					<form:select class="form-control" path="countryProducing"
 						id="countryProducing" items="${countryProducings}"
 						itemLabel="nameOfCountry" itemValue="id" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">touchId</label>
-				<div class="col-sm-10">
+				<label for="name" class="col-sm-3 control-label">touchId</label>
+				<div class="col-sm-6">
 					<form:input type="text" class="form-control" path="touchId"
 						id="name" />
 				</div>
 			</div>
 			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
+				<div class="col-sm-offset-3 col-sm-9">
 					<button type="submit" class="btn btn-primary">Create</button>
 				</div>
 			</div>

@@ -3,11 +3,15 @@ package ua.com.shop.serviceImpl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import ua.com.shop.dao.MeasuringSystemDao;
+import ua.com.shop.dto.filter.SimpleFilter;
 import ua.com.shop.entity.MeasuringSystem;
 import ua.com.shop.service.MeasuringSystemService;
+import ua.com.shop.specification.MeasuringSystemSpecisication;
 @Service
 public class MeasuringSystemServiceImpl implements MeasuringSystemService{
 
@@ -38,6 +42,11 @@ public class MeasuringSystemServiceImpl implements MeasuringSystemService{
 
 	public MeasuringSystem findByUnitsOfMeasurement(String unitsOfMeasurement) {
 		return measuringSystemDao.findByUnitsOfMeasurement(unitsOfMeasurement);
+	}
+
+	@Override
+	public Page<MeasuringSystem> findAll(Pageable pageable, SimpleFilter filter) {
+		return measuringSystemDao.findAll(new MeasuringSystemSpecisication(filter), pageable);
 	}
 
 }

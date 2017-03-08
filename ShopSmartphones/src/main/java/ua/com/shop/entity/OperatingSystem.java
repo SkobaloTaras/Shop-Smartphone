@@ -6,7 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import ua.com.shop.service.OperatingSystemService;
 
 @Entity
 @Table(name="operating_system")
@@ -18,12 +17,6 @@ public class OperatingSystem {
 	private int id;
 	private String nameOfOperationSystem;
 	
-	public OperatingSystem(OperatingSystemService operatingSystemService) {
-		// TODO Auto-generated constructor stub
-	}
-	public OperatingSystem() {
-		// TODO Auto-generated constructor stub
-	}
 	public int getId() {
 		return id;
 	}

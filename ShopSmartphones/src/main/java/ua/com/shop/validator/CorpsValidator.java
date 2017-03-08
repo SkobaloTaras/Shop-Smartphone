@@ -81,7 +81,7 @@ public class CorpsValidator implements Validator {
 					form.getWeight(), form.getWarranty(),
 					form.getTouchId(), form.getMeasuringSystem(),
 					form.getMeasuringSystem2(), form.getMeasuringSystem3(),
-					form.getMeasuringSystem4(), form.getMeasuringSystem5(), form.getCountryProducing(), form.getProducer()) != null) {
+					form.getMeasuringSystem4(), form.getMeasuringSystem5(), form.getCountryProducing(), form.getProducer(), form.getColor()) != null) {
 				errors.rejectValue("options", "", "Already exist!");
 			}
 		}

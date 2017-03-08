@@ -41,13 +41,10 @@
 				</div>
 				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">Camera</label>
-    				<div class="col-sm-10">
+    				<div class="col-sm-4">
       					<form:input type="text" class="form-control" path="mainCamera" id="name"/>
     				</div>
-  				</div>
-  				<div class="form-group">
-    				<label for="measuringSystem" class="col-sm-2 control-label">Measuring system</label>
-    				<div class="col-sm-10">
+    				<div class="col-sm-2">
       					<form:select class="form-control" path="measuringSystem" id="measuringSystem" items="${measuringSystems}" itemLabel="unitsOfMeasurement" itemValue="id"/>
     				</div>
   				</div>
@@ -56,28 +53,22 @@
 				</div>
 				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">front Camera</label>
-    				<div class="col-sm-10">
+    				<div class="col-sm-4">
       					<form:input type="text" class="form-control" path="frontCamera" id="name"/>
     				</div>
-  				</div>	
-				<div class="form-group">
-    				<label for="measuringSystem" class="col-sm-2 control-label">Measuring system</label>
-    				<div class="col-sm-10">
+    				<div class="col-sm-2">
       					<form:select class="form-control" path="measuringSystem2" id="measuringSystem" items="${measuringSystems}" itemLabel="unitsOfMeasurement" itemValue="id"/>
     				</div>
-  				</div>
+  				</div>	
   				<div class="form-group">
 						<label class="col-sm-10 col-sm-offset-2 control-label" for="videoResolution" style="color:red;text-align:left;"><form:errors path="videoResolution"/></label>
 				</div>
 				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">video Resolution</label>
-    				<div class="col-sm-10">
+    				<div class="col-sm-4">
       					<form:input type="text" class="form-control" path="videoResolution" id="name"/>
     				</div>
-  				</div>
-				<div class="form-group">
-    				<label for="measuringSystem" class="col-sm-2 control-label">Measuring system</label>
-    				<div class="col-sm-10">
+    				<div class="col-sm-2">
       					<form:select class="form-control" path="measuringSystem3" id="measuringSystem" items="${measuringSystems}" itemLabel="unitsOfMeasurement" itemValue="id"/>
     				</div>
   				</div>
@@ -86,7 +77,7 @@
 				</div>
   				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">flash</label>
-    				<div class="col-sm-10">
+    				<div class="col-sm-4">
       					<form:input type="text" class="form-control" path="flash" id="name"/>
     				</div>
   				</div>

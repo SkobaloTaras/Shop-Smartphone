@@ -3,6 +3,7 @@ package ua.com.shop.service;
 import java.util.List;
 
 import ua.com.shop.dto.form.CorpsForm;
+import ua.com.shop.entity.Color;
 import ua.com.shop.entity.Corps;
 import ua.com.shop.entity.CountryProducing;
 import ua.com.shop.entity.MeasuringSystem;
@@ -19,7 +20,7 @@ public interface CorpsService {
 			String touchId, MeasuringSystem measuringSystem,
 			MeasuringSystem measuringSystem2, MeasuringSystem measuringSystem3,
 			MeasuringSystem measuringSystem4, MeasuringSystem measuringSystem5,
-			CountryProducing countryProducing, Producer producer);
+			CountryProducing countryProducing, Producer producer, Color color);
 	void save(CorpsForm corpsForm);
 	
 }
